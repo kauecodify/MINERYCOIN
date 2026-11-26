@@ -1,0 +1,131 @@
+{
+  "reference": "MTC/ORIGEM/001/2026 - Etapa 3, matriz de decisao",
+  "profiles": {
+    "mineral_bruto": {
+      "label": "Mineral bruto",
+      "criteria": "CTC-4",
+      "rvcThreshold": null,
+      "specificProcess": null,
+      "minimalOperationsForbidden": true,
+      "deMinimisExclusion": false,
+      "weightTolerance": false,
+      "rationale": "Impede que lavagem, peneiramento ou reembalagem caracterizem origem."
+    },
+    "metal_processado": {
+      "label": "Metal processado",
+      "criteria": "CTC-4",
+      "alternative": { "criteria": "RVC", "rvcThreshold": 40 },
+      "rvcThreshold": null,
+      "specificProcess": null,
+      "minimalOperationsForbidden": false,
+      "deMinimisExclusion": false,
+      "weightTolerance": false,
+      "rationale": "Reconhece cadeia integrada de transformacao metalurgica."
+    },
+    "produto_quimico": {
+      "label": "Produto quimico",
+      "criteria": "CTC-4",
+      "alternative": { "criteria": "RVC", "rvcThreshold": 50 },
+      "rvcThreshold": null,
+      "specificProcess": null,
+      "minimalOperationsForbidden": false,
+      "deMinimisExclusion": false,
+      "weightTolerance": false,
+      "rationale": "Transformacao quimica substantiva ou conteudo regional equivalente."
+    },
+    "produto_agricola": {
+      "label": "Produto agricola",
+      "criteria": "CTC-2",
+      "alternative": null,
+      "rvcThreshold": null,
+      "specificProcess": null,
+      "minimalOperationsForbidden": false,
+      "deMinimisExclusion": false,
+      "weightTolerance": true,
+      "weightTolerancePct": 3,
+      "weightTolerancePending": true,
+      "rationale": "Tolerancia de peso para perdas naturais de manuseio, valor a fixar em negociacao."
+    },
+    "textil_vestuario": {
+      "label": "Textil e vestuario",
+      "criteria": "CTC-2",
+      "extendedRule": "fio para tecido para confecao",
+      "alternative": null,
+      "rvcThreshold": null,
+      "specificProcess": null,
+      "minimalOperationsForbidden": false,
+      "deMinimisExclusion": true,
+      "weightTolerance": false,
+      "rationale": "Cadeia multipla (fio, tecido, confeccao) sem de minimis ampliado."
+    },
+    "calcado": {
+      "label": "Calcado",
+      "criteria": "CTC-4",
+      "specificProcess": "montagem_final",
+      "alternative": null,
+      "rvcThreshold": null,
+      "minimalOperationsForbidden": false,
+      "deMinimisExclusion": true,
+      "weightTolerance": false,
+      "rationale": "Exige montagem final na parte exportadora; impede reembalagem."
+    },
+    "maquinas_eletronicos": {
+      "label": "Maquinas e eletronicos",
+      "criteria": "RVC",
+      "rvcThreshold": 40,
+      "alternative": { "criteria": "CTC-4" },
+      "specificProcess": null,
+      "minimalOperationsForbidden": false,
+      "deMinimisExclusion": false,
+      "weightTolerance": false,
+      "rationale": "Fragmentacao produtiva com conteudo regional minimo."
+    },
+    "veiculos_autopecas": {
+      "label": "Veiculos e autopecas",
+      "criteria": "RVC",
+      "rvcThreshold": 50,
+      "conjunction": { "criteria": "CTC-4" },
+      "alternative": null,
+      "specificProcess": null,
+      "minimalOperationsForbidden": false,
+      "deMinimisExclusion": false,
+      "weightTolerance": false,
+      "rationale": "Duplo requisito para o setor automotivo."
+    }
+  },
+  "deMinimis": {
+    "percent": 10,
+    "excludedChapters": [50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64]
+  },
+  "accumulation": {
+    "bilateral": true,
+    "extended": {
+      "enabled": true,
+      "requireAgreement": true,
+      "requireCertifiedInputs": true,
+      "activeAgreements": [
+        { "code": "RCEP", "label": "Parceria Economica Regional Abrangente", "regions": ["IDN", "CHN", "JPN", "KOR", "AUS", "NZL", "THA", "VNM", "MYS", "SGP", "PHL", "MMR", "KHM", "LAO", "BRN"] },
+        { "code": "ATIGA", "label": "Acordo ASEAN de Comercio de Mercadorias", "regions": ["IDN", "MYS", "SGP", "THA", "VNM", "PHL", "BRN", "KHM", "LAO", "MMR"] },
+        { "code": "IJEPA", "label": "Acordo Indonesia-Japao", "regions": ["IDN", "JPN"] },
+        { "code": "IK-CEPA", "label": "Acordo Indonesia-Coreia do Sul", "regions": ["IDN", "KOR"] },
+        { "code": "ACFTA", "label": "Acordo ASEAN-China", "regions": ["IDN", "CHN"] }
+      ]
+    }
+  },
+  "proofOfOrigin": {
+    "validityMonths": 12,
+    "types": ["certificado", "autodeclaracao", "declaracao_importador"],
+    "issuerRegistrationRequired": ["autodeclaracao"],
+    "lowValueImporterDeclarationPending": true
+  },
+  "verification": {
+    "aPosterioriYears": 3,
+    "cooperationResponseDays": 90,
+    "documentConformityTargetPct": 95,
+    "classificationDivergenceMaxPct": 2,
+    "provenCriterionMinPct": 90,
+    "unbackedAccumulationMaxPct": 1,
+    "deMinimisMisuseMaxPct": 1,
+    "auditOnTimeTargetPct": 85
+  }
+}

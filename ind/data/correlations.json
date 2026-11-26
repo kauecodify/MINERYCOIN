@@ -1,0 +1,167 @@
+{
+  "version": "SH-2022",
+  "reference": "MTC/ORIGEM/001/2026 - Etapa 2",
+  "legalBasis": ["B.1", "B.6", "B.7"],
+  "records": [
+    {
+      "sh6": "260111",
+      "description": "Minerios de ferro e seus concentrados, exceto piiritos de ferro, nao aglomerados",
+      "ncm": "2601.11.00",
+      "btki": "2601.11.00",
+      "chapter": "26",
+      "profile": "mineral_bruto",
+      "correspondence": "direta",
+      "note": "Correspondencia plena entre NCM e BTKI no nivel de 8 digitos."
+    },
+    {
+      "sh6": "260112",
+      "description": "Minerios de ferro e seus concentrados, exceto piiritos de ferro, aglomerados",
+      "ncm": "2601.12.00",
+      "btki": "2601.12.00",
+      "chapter": "26",
+      "profile": "mineral_bruto",
+      "correspondence": "direta",
+      "note": "Pellet feed e pelotizacao exigem revisao de processo produtivo em ambas as partes."
+    },
+    {
+      "sh6": "260300",
+      "description": "Minerios de cobre e seus concentrados",
+      "ncm": "2603.00.10",
+      "btki": "2603.00.10",
+      "chapter": "26",
+      "profile": "mineral_bruto",
+      "correspondence": "direta",
+      "note": "Desdobramentos nacionais identicos no segmento de concentrados."
+    },
+    {
+      "sh6": "260400",
+      "description": "Minerios de niquel e seus concentrados",
+      "ncm": "2604.00.00",
+      "btki": "2604.00.00",
+      "chapter": "26",
+      "profile": "mineral_bruto",
+      "correspondence": "direta",
+      "note": "Linha estrategica para o lado indonesio."
+    },
+    {
+      "sh6": "260600",
+      "description": "Minerios de aluminio (bauxita) e seus concentrados",
+      "ncm": "2606.00.00",
+      "btki": "2606.00.00",
+      "chapter": "26",
+      "profile": "mineral_bruto",
+      "correspondence": "direta",
+      "note": "Cadeia de aluminio primario dos dois lados."
+    },
+    {
+      "sh6": "260900",
+      "description": "Minerios de estanho e seus concentrados",
+      "ncm": "2609.00.00",
+      "btki": "2609.00.00",
+      "chapter": "26",
+      "profile": "mineral_bruto",
+      "correspondence": "direta",
+      "note": "Indonesia lidera a oferta mundial; controle de operacoes minimas essencial."
+    },
+    {
+      "sh6": "270112",
+      "description": "Carvao de bitume, mesmo em po, exceto antracites",
+      "ncm": "2701.12.00",
+      "btki": "2701.12.00",
+      "chapter": "27",
+      "profile": "mineral_bruto",
+      "correspondence": "direta",
+      "note": "Mercadoria de alto volume no fluxo bilateral."
+    },
+    {
+      "sh6": "720260",
+      "description": "Ferro-niquel",
+      "ncm": "7202.60.00",
+      "btki": "7202.60.00",
+      "chapter": "72",
+      "profile": "metal_processado",
+      "correspondence": "direta",
+      "note": "Produto de transformacao real a partir do minerio de niquel."
+    },
+    {
+      "sh6": "750210",
+      "description": "Niquel em bruto, nao ligado",
+      "ncm": "7502.10.00",
+      "btki": "7502.10.00",
+      "chapter": "75",
+      "profile": "metal_processado",
+      "correspondence": "direta",
+      "note": "Niquel refinado para cadeia de baterias."
+    },
+    {
+      "sh6": "811212",
+      "description": "Niobio, em bruto ou em po",
+      "ncm": "8112.12.10",
+      "btki": "8112.99.10",
+      "chapter": "81",
+      "profile": "metal_processado",
+      "correspondence": "parcial",
+      "note": "Alerta de correlacao: a BTKI aloca niobio junto a outros metais raros; exige nota explicativa bilateral."
+    },
+    {
+      "sh6": "280461",
+      "description": "Silicio com teor de silicio igual ou superior a 99,99% em peso",
+      "ncm": "2804.61.00",
+      "btki": "2804.61.00",
+      "chapter": "28",
+      "profile": "produto_quimico",
+      "correspondence": "direta",
+      "note": "Insumo para cadeia de semicondutores e fotovoltaica."
+    },
+    {
+      "sh6": "710813",
+      "description": "Ouro em outras formas semitransformadas, nao monetario",
+      "ncm": "7108.13.00",
+      "btki": "7108.13.00",
+      "chapter": "71",
+      "profile": "metal_processado",
+      "correspondence": "direta",
+      "note": "Exigencia de rastreabilidade de mineracao legal em ambas as jurisdicoes."
+    },
+    {
+      "sh6": "252330",
+      "description": "Cimento Portland aluminoso",
+      "ncm": "2523.30.00",
+      "btki": "2523.30.90",
+      "chapter": "25",
+      "profile": "produto_quimico",
+      "correspondence": "parcial",
+      "note": "Alerta de correlacao: desdobramento BTKI em 10 digitos sem equivalente NCM; consolidar no nivel de 8 digitos."
+    },
+    {
+      "sh6": "100630",
+      "description": "Arroz semibranqueado ou branco, mesmo polido ou glaceado",
+      "ncm": "1006.30.21",
+      "btki": "1006.30.21",
+      "chapter": "10",
+      "profile": "produto_agricola",
+      "correspondence": "direta",
+      "note": "Regra de referencia para tolerancia de peso na Etapa 3."
+    },
+    {
+      "sh6": "520811",
+      "description": "Tecidos de algodao, impregnados, com peso igual ou inferior a 200 g/m2, tingidos em fio",
+      "ncm": "5208.11.00",
+      "btki": "5208.11.00",
+      "chapter": "52",
+      "profile": "textil_vestuario",
+      "correspondence": "direta",
+      "note": "Capitulo excluido do de minimis ampliado, conforme tratamento setorial."
+    },
+    {
+      "sh6": "640399",
+      "description": "Calcados com sola e cabedal de borracha, plastico ou couro natural, parte superior em couro natural",
+      "ncm": "6403.99.90",
+      "btki": "6403.99.90",
+      "chapter": "64",
+      "profile": "calcado",
+      "correspondence": "direta",
+      "note": "Processo especifico de montagem final na parte exportadora."
+    }
+  ]
+}

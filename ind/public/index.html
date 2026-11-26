@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Sistema Operacional de Origem Mercosul-Indonesia</title>
+<link rel="stylesheet" href="/ind/public/styles.css" />
+</head>
+<body>
+<header>
+  <div class="cabecalho-topo">
+    <div class="identificacao">
+      <div class="logotipo-band">
+        <svg viewBox="0 0 720 504" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bandeira do Brasil">
+          <rect width="720" height="504" fill="#009b3a"/>
+          <polygon points="360,28 692,252 360,476 28,252" fill="#fedf00"/>
+          <circle cx="360" cy="252" r="122" fill="#002776"/>
+          <path d="M 242 288 A 176 176 0 0 1 478 236" fill="none" stroke="#ffffff" stroke-width="26"/>
+        </svg>
+        <svg viewBox="0 0 720 504" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bandeira da Indonesia">
+          <rect width="720" height="252" fill="#ce1126"/>
+          <rect y="252" width="720" height="252" fill="#ffffff"/>
+        </svg>
+      </div>
+      <div>
+        <h1>MINERYCOIN</h1>
+        <div class="subtitulo">Sistema de Interoperabilidade de Origem - Mercosul e Indonesia</div>
+        <div class="referencia">MTC/ORIGEM/001/2026 - SH-2022, NCM, BTKI/AHTN</div>
+      </div>
+    </div>
+    <nav>
+      <a href="#correlacao">Correlacao</a>
+      <a href="#operacao">Operacao</a>
+      <a href="#rd">Pesquisa e Desenvolvimento</a>
+      <a href="#indicadores">Indicadores</a>
+      <a href="/">Apresentacao</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section id="correlacao">
+    <h2>Tabela de Correlacao SH-2022 - NCM - BTKI</h2>
+    <div class="barra-ferramentas">
+      <label for="filtro-capitulo">Capitulo</label>
+      <select id="filtro-capitulo"><option value="">Todos</option></select>
+      <label for="filtro-perfil">Perfil</label>
+      <select id="filtro-perfil"><option value="">Todos</option><option value="mineral_bruto">Mineral bruto</option><option value="metal_processado">Metal processado</option><option value="produto_quimico">Produto quimico</option><option value="produto_agricola">Produto agricola</option><option value="textil_vestuario">Textil e vestuario</option><option value="calcado">Calcado</option></select>
+      <label for="filtro-corr">Correspondencia</label>
+      <select id="filtro-corr"><option value="">Todas</option><option value="direta">Direta</option><option value="parcial">Parcial</option></select>
+      <button id="btn-recarregar">Recarregar</button>
+    </div>
+    <div id="alerta-correlacao" class="alerta oculto"></div>
+    <table>
+      <thead>
+        <tr><th>SH-6</th><th>NCM</th><th>BTKI</th><th>Perfil</th><th>Correspondencia</th><th>Observacao</th></tr>
+      </thead>
+      <tbody id="tabela-correlacao"><tr><td colspan="6">Carregando...</td></tr></tbody>
+    </table>
+  </section>
+
+  <section id="operacao">
+    <h2>Validacao de Operacao de Mineracao</h2>
+    <p class="ajuda">Preenche os dados da operacao e submete ao controle juridico (controles C.1 a C.5). Criterios admitidos: CTC com salto de 2, 4 ou 6 digitos; RVC com percentual regional; processo especifico (SP) quando exigido pelo perfil.</p>
+    <div class="grade-formulario">
+      <label>Codigo SH-6
+        <input id="op-sh6" placeholder="Ex.: 720260" />
+      </label>
+      <label>Pais de origem
+        <select id="op-origem">
+          <option value="BR">Brasil</option>
+          <option value="AR">Argentina</option>
+          <option value="PY">Paraguai</option>
+          <option value="UY">Uruguai</option>
+          <option value="IDN" selected>Indonesia</option>
+        </select>
+      </label>
+      <label>Pais de destino
+        <select id="op-destino">
+          <option value="BR" selected>Brasil</option>
+          <option value="AR">Argentina</option>
+          <option value="PY">Paraguai</option>
+          <option value="UY">Uruguai</option>
+          <option value="IDN">Indonesia</option>
+        </select>
+      </label>
+      <label>Criterio aplicado
+        <select id="op-criterio">
+          <option value="CTC" selected>CTC</option>
+          <option value="RVC">RVC</option>
+        </select>
+      </label>
+      <label>Salto de digitos (CTC)
+        <input id="op-ctc" value="4" />
+      </label>
+      <label>RVC (%)
+        <input id="op-rvc" value="" placeholder="Apenas quando criterio RVC" />
+      </label>
+      <label>Materiais nao originarios (%)
+        <input id="op-nom" value="5" />
+      </label>
+      <label>Processo especifico realizado
+        <input id="op-sp" placeholder="Ex.: montagem_final" />
+      </label>
+      <label>Operacoes minimas
+        <input id="op-min" placeholder="Ex.: peneiramento (deixe vazio quando nenhuma)" />
+      </label>
+      <label>Tipo de acumulacao
+        <select id="op-acc-tipo">
+          <option value="" selected>Nenhuma</option>
+          <option value="bilateral">Bilateral</option>
+          <option value="estendida">Estendida</option>
+        </select>
+      </label>
+      <label>Acordo (acumulacao estendida)
+        <select id="op-acc-acordo">
+          <option value="" selected>Nenhum</option>
+          <option value="RCEP">RCEP</option>
+          <option value="ATIGA">ATIGA</option>
+          <option value="IJEPA">IJEPA</option>
+          <option value="IK-CEPA">IK-CEPA</option>
+          <option value="ACFTA">ACFTA</option>
+        </select>
+      </label>
+      <label>Paises de insumo
+        <input id="op-acc-paises" placeholder="Ex.: JPN,KOR" />
+      </label>
+      <label class="caixa"><input type="checkbox" id="op-acc-cert" /> Insumos acumulados certificados</label>
+      <label>Tipo de prova de origem
+        <select id="op-prova">
+          <option value="certificado" selected>Certificado</option>
+          <option value="autodeclaracao">Autodeclaracao</option>
+          <option value="declaracao_importador">Declaracao do importador</option>
+        </select>
+      </label>
+      <label>Registro previo (autodeclaracao)
+        <select id="op-registro">
+          <option value="sim" selected>Sim</option>
+          <option value="nao">Nao</option>
+        </select>
+      </label>
+      <label>Validade da prova (meses)
+        <input id="op-meses" value="12" />
+      </label>
+      <div class="acoes">
+        <button id="btn-validar" class="primario">Validar operacao</button>
+      </div>
+    </div>
+    <div id="resultado-operacao" class="oculto"></div>
+  </section>
+
+  <section id="rd">
+    <h2>Registro de Produtos de Pesquisa e Desenvolvimento</h2>
+    <p class="ajuda">Novo produto do programa tecnico e industrial entre o bloco e a Indonesia. A linha SH-6 deve constar da tabela de correlacao; a API sugere a REOS segundo a matriz de decisao.</p>
+    <div class="grade-formulario">
+      <label>Codigo SH-6
+        <input id="rd-sh6" placeholder="Ex.: 260400" />
+      </label>
+      <label>Titulo do produto
+        <input id="rd-titulo" placeholder="Ex.: Concentrado de niquel para baterias" />
+      </label>
+      <label class="inteira">Descricao tecnica
+        <textarea id="rd-descricao" rows="3"></textarea>
+      </label>
+      <div class="acoes">
+        <button id="btn-rd" class="primario">Registrar produto</button>
+        <button id="btn-rd-lista">Listar registrados</button>
+      </div>
+    </div>
+    <div id="lista-rd" class="oculto"></div>
+  </section>
+
+  <section id="indicadores">
+    <h2>Painel de Indicadores</h2>
+    <div id="painel-indicadores" class="grade-indicadores">Carregando...</div>
+  </section>
+</main>
+
+<footer>
+  Coordenação Tecnica de Regras de Origem &#8226; Receita Federal e Direktorat Jenderal Bea dan Cukai &#8226; Verificacao a posteriori em ate 3 anos
+</footer>
+
+<script src="/ind/public/app.js"></script>
+</body>
+</html>
