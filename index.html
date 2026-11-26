@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>MINERYCOIN - Mecanismo de Regras de Origem Mercosul-Indonesia</title>
+<style>
+  :root {
+    --verde-bandeira: #006b2d;
+    --vermelho-indonesia: #ce1126;
+    --tinta: #1f2a24;
+    --papel: #f6f6f2;
+    --linha: #d9d9d2;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: Georgia, "Times New Roman", serif;
+    background: var(--papel);
+    color: var(--tinta);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  header {
+    border-bottom: 3px double var(--linha);
+    text-align: center;
+    padding: 56px 24px 24px;
+  }
+  .moldura {
+    max-width: 880px;
+    margin: 0 auto;
+  }
+  .bandeiras {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    margin: 32px 0 36px;
+  }
+  .bandeira {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+  .bandeira svg {
+    width: 240px;
+    height: auto;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.18);
+    border: 1px solid rgba(0,0,0,0.25);
+  }
+  .bandeira span {
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  .entre-bandeiras {
+    font-size: 28px;
+    color: #8a8a80;
+  }
+  h1 {
+    font-size: 30px;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  h2 {
+    font-size: 17px;
+    font-weight: normal;
+    letter-spacing: 2px;
+    color: #55554e;
+  }
+  main {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 40px 24px 24px;
+    width: 100%;
+    flex: 1;
+  }
+  section {
+    margin-bottom: 36px;
+  }
+  section h3 {
+    font-size: 15px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--linha);
+    padding-bottom: 8px;
+    margin-bottom: 14px;
+  }
+  p { line-height: 1.7; margin-bottom: 10px; }
+  ul { list-style: none; }
+  ul li {
+    padding: 8px 0;
+    border-bottom: 1px dotted var(--linha);
+    font-size: 15px;
+    line-height: 1.5;
+  }
+  ul li code {
+    font-family: "Courier New", monospace;
+    font-size: 14px;
+    color: #3a3a33;
+  }
+  .citacao {
+    border-left: 3px solid var(--verde-bandeira);
+    padding: 10px 18px;
+    background: #ffffff;
+    font-size: 15px;
+    line-height: 1.7;
+  }
+  a.botao {
+    display: inline-block;
+    background: var(--verde-bandeira);
+    color: #ffffff;
+    text-decoration: none;
+    padding: 14px 34px;
+    font-size: 15px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-top: 8px;
+  }
+  footer {
+    border-top: 3px double var(--linha);
+    text-align: center;
+    padding: 18px 24px 26px;
+    font-size: 13px;
+    color: #77776e;
+    letter-spacing: 1px;
+  }
+</style>
+</head>
+<body>
+  <header>
+    <div class="moldura">
+      <div style="font-size:12px;letter-spacing:3px;color:#8a8a80;margin-bottom:18px;">MEMORANDO TECNICO DE CONTROLE - MTC/ORIGEM/001/2026</div>
+      <h1>MINERYCOIN</h1>
+      <h2>Mecanismo de Regras de Origem - Acordo Mercosul e Indonesia</h2>
+      <div class="bandeiras">
+        <div class="bandeira">
+          <svg viewBox="0 0 720 504" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bandeira do Brasil">
+            <rect width="720" height="504" fill="#009b3a"/>
+            <polygon points="360,28 692,252 360,476 28,252" fill="#fedf00"/>
+            <circle cx="360" cy="252" r="122" fill="#002776"/>
+            <path d="M 242 288 A 176 176 0 0 1 478 236" fill="none" stroke="#ffffff" stroke-width="26"/>
+            <circle cx="300" cy="300" r="4" fill="#ffffff"/>
+            <circle cx="322" cy="282" r="3" fill="#ffffff"/>
+            <circle cx="352" cy="296" r="4" fill="#ffffff"/>
+            <circle cx="384" cy="280" r="3" fill="#ffffff"/>
+            <circle cx="416" cy="268" r="4" fill="#ffffff"/>
+            <circle cx="404" cy="300" r="3" fill="#ffffff"/>
+          </svg>
+          <span>Republica Federativa do Brasil</span>
+        </div>
+        <div class="entre-bandeiras" aria-hidden="true">&#8212;</div>
+        <div class="bandeira">
+          <svg viewBox="0 0 720 504" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bandeira da Indonesia">
+            <rect width="720" height="252" fill="#ce1126"/>
+            <rect y="252" width="720" height="252" fill="#ffffff"/>
+          </svg>
+          <span>Republica da Indonesia</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <h3>Finalidade</h3>
+      <p>Este projeto implementa a operacao tecnica prevista no memorando MTC/ORIGEM/001/2026: a interoperabilidade entre o Brasil (Mercosul, nomenclatura NCM sobre a SH-2022) e a Indonesia (nomenclatura BTKI/AHTN), com validacao juridica das operacoes de mineracao, acumulacao de origem e registro de novos produtos de pesquisa e desenvolvimento.</p>
+      <div class="citacao">
+        O mecanismo nao cria um sistema novo. Conecta estruturas existentes: a correlacao SH-2022 com a NCM e a BTKI, as REOS do ACE-18 e do Acordo Mercosul-UE, a acumulacao estendida do RCEP e o controle documental entre a Receita Federal e a Direktorat Jenderal Bea dan Cukai.
+      </div>
+    </section>
+
+    <section>
+      <h3>Acesso</h3>
+      <ul>
+        <li>Sistema operacional de validacao de origem: <a href="/ind/">ind/index.html</a></li>
+        <li>Estado da API: <code>GET /api/health</code></li>
+        <li>Base juridica (B.1 a B.7): <code>GET /api/legal</code></li>
+        <li>Tabela de correlacao SH-2022 - NCM - BTKI: <code>GET /api/correlations</code></li>
+        <li>Matriz de regras de origem (REOS): <code>GET /api/reos</code></li>
+        <li>Validacao de operacao de mineracao: <code>POST /api/operations/validate</code></li>
+        <li>Produtos de pesquisa e desenvolvimento: <code>POST /api/rd/products</code></li>
+        <li>Painel de indicadores: <code>GET /api/indicators</code></li>
+      </ul>
+      <a class="botao" href="/ind/">Acessar o sistema operacional</a>
+    </section>
+
+    <section>
+      <h3>Arquitetura</h3>
+      <ul>
+        <li>Camada 1 - Nomenclatura: base comum SH-2022, desdobramentos NCM e BTKI, tabela de correlacao com teste de rastreabilidade.</li>
+        <li>Camada 2 - Regras de origem: criterios CTC, RVC e SP, calibrados pela matriz de decisao por perfil produtivo.</li>
+        <li>Camada 3 - Flexibilidades: acumulacao bilateral plena, acumulacao estendida condicionada, de minimis de 10% com exclusao setorial.</li>
+        <li>Camada 4 - Prova de origem: certificado, autodeclaracao registrada e declaracao do importador, validade de 12 meses.</li>
+        <li>Camada 5 - Controle: verificacao documental, verificacao a posteriori de ate 3 anos e cooperacao administrativa.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    Coordenação Tecnica de Regras de Origem &#8226; Projeto MINERYCOIN &#8226; Consulta publica Acordo Mercosul-Indonesia
+  </footer>
+</body>
+</html>

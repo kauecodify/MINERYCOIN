@@ -1,0 +1,27 @@
+{
+  "reference": "MTC/ORIGEM/001/2026 - secao 3",
+  "bases": [
+    { "code": "B.1", "title": "Decisao CMC n. 05/23 - Novo Regime de Origem do Mercosul", "scope": "Arquitetura de regras de origem do bloco e estrutura de REOS." },
+    { "code": "B.2", "title": "218o Protocolo Adicional ao ACE-18 e Decreto n. 12.058/2024", "scope": "Regime vigente de origem no acordo Mercosul-Indonesia em perspectiva; praticas de prova de origem." },
+    { "code": "B.3", "title": "Acordo Mercosul-UE - Anexo 3-B (REOS) e Anexo 3-A (Notas)", "scope": "Modelo de PSR e de minimis de 10% com exclusoes setoriais." },
+    { "code": "B.4", "title": "RCEP - Capitulo 3 (Regras de Origem)", "scope": "Referencia de acumulacao estendida (diagonal) com verificacao." },
+    { "code": "B.5", "title": "ASEAN ATIGA - Capitulo 3", "scope": "Referencia de sistema de prova de origem e certificado." },
+    { "code": "B.6", "title": "BTKI - Buku Tarif Kepabeanan Indonesia (AHTN)", "scope": "Nomenclatura aduaneira da Indonesia, 8 ou 10 digitos." },
+    { "code": "B.7", "title": "NCM - Nomenclatura Comum do Mercosul (SH-2022)", "scope": "Nomenclatura aduaneira do Mercosul, 8 digitos." }
+  ],
+  "controles": [
+    { "code": "C.1", "title": "Controle documental", "indicator": "Conformidade documental >= 95%" },
+    { "code": "C.2", "title": "Controle de classificacao", "indicator": "Divergencias <= 2%" },
+    { "code": "C.3", "title": "Controle de origem", "indicator": "Criterio comprovado >= 90%" },
+    { "code": "C.4", "title": "Controle de acumulacao", "indicator": "Acumulacoes sem lastro <= 1%" },
+    { "code": "C.5", "title": "Controle de de minimis", "indicator": "Uso indevido <= 1%" },
+    { "code": "C.6", "title": "Verificacao a posteriori", "indicator": "Auditorias no prazo >= 85%" },
+    { "code": "C.7", "title": "Cooperacao administrativa", "indicator": "Respostas em ate 90 dias >= 80%" }
+  ],
+  "governanca": [
+    { "code": "G.1", "title": "Comite de Origem", "function": "Supervisao politica e tecnica, periodicidade mensal." },
+    { "code": "G.2", "title": "Grupo Tecnico de REOS", "function": "Redacao e revisao das REOS por produto." },
+    { "code": "G.3", "title": "Ponto Focal de Verificacao", "function": "Recebimento e processamento de verificacoes e cooperacao." },
+    { "code": "G.4", "title": "Canal de Consulta ao Operador", "function": "Resposta de duvidas em ate 15 dias uteis." }
+  ]
+}
